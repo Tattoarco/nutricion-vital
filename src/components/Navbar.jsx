@@ -26,15 +26,15 @@ export default function Navbar() {
   return (
     <header className="w-full absolute top-0 left-0 z-50">
       {/* Top Bar */}
-      <div className="bg-orange-400 text-white text-sm">
-        <div className="max-w-7xl mx-auto px-6 py-2 flex justify-end space-x-6">
-          <a href="#" className="hover:text-yellow-200 transition">
+      <div className="bg-black text-white text-lg">
+        <div className="max-w-7xl mx-auto px-6 py-2 flex justify-center space-x-6">
+          <a target="_blank" href="https://www.instagram.com/serumvital76?igsh=aTNmZnhpNnhrZTl1" className="hover:text-yellow-200 transition">
             <FontAwesomeIcon icon={faInstagram} />
           </a>
-          <a href="#" className="hover:text-yellow-200 transition">
+          <a target="_blank" href=" " className="hover:text-yellow-200 transition">
             <FontAwesomeIcon icon={faFacebook} />
           </a>
-          <a href="#" className="hover:text-yellow-200 transition">
+          <a target="_blank" href="" className="hover:text-yellow-200 transition">
             <FontAwesomeIcon icon={faWhatsapp} />
           </a>
         </div>
