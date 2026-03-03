@@ -5,6 +5,7 @@ import Carousel from "../components/Carousel";
 import Footer from "../components/Footer";
 import Card from "../components/Cards";
 import Modal from "../components/Modals";
+import Scanner from "../components/Scanner";
 
 export default function Home() {
   const imagesCarrousel = ["https://res.cloudinary.com/dpflwb7nl/image/upload/v1771794713/tropical-fruits-pattern_tekt9o.jpg", "https://res.cloudinary.com/dpflwb7nl/image/upload/v1771794712/watercolor-assortment-fruits_jucwds.jpg"];
@@ -38,6 +39,11 @@ export default function Home() {
         <section id="inicio">
           <Navbar />
           <Carousel images={imagesCarrousel} title={"Nutrición que trasforma tu vida"} text={"Bienestar celular, energía y equilibrio natural."} />
+        </section>
+
+        {/* Scanner  */}
+        <section id="scanner" className=" flex justify-center bg-[#fff6e8]">
+          <Scanner />
         </section>
 
         <section id="productos">

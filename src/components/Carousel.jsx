@@ -28,7 +28,7 @@ export default function Carousel({ images, autoSlide = true, interval = 9000, ti
       ))}
 
       {/* Overlay oscuro sutil */}
-      <div className="absolute inset-0 bg-black/30 z-20" />
+      <div className="absolute inset-0 bg-black/20 z-20" />
 
       {/* Contenido opcional */}
       <div className="absolute inset-0 z-30 flex flex-col items-center justify-center text-white text-center px-6">
