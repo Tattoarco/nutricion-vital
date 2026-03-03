@@ -35,15 +35,15 @@ export default function Home() {
   return (
     <>
       <main className="min-h-screen">
-        <section id="inicio" className=" container mx-auto">
+        <section id="inicio">
           <Navbar />
-          <div>
-            <Carousel images={imagesCarrousel} title={"Nutrición que trasforma tu vida"} text={"Bienestar celular, energía y equilibrio natural."} />
-          </div>
+          <Carousel images={imagesCarrousel} title={"Nutrición que trasforma tu vida"} text={"Bienestar celular, energía y equilibrio natural."} />
+        </section>
 
+        <section id="productos">
           {/* Productos destacados */}
           <div className="pt-10 px-3 bg-[#fff6e8] pb-10">
-            <h2 className="text-2xl font-bold text-red-500 mb-6 text-center">Productos destacados</h2>
+            <h2 className="text-3xl font-bold text-red-500 mb-6 text-center">Productos destacados</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {products.map((product, index) => (
@@ -52,7 +52,7 @@ export default function Home() {
                   image={product.image}
                   title={product.title}
                   description={product.description}
-                  primaryText="Comprar"
+                  primaryText=""
                   secondaryText="Detalles"
                   onPrimaryClick={() => console.log("Comprar")}
                   onSecondaryClick={() => {
@@ -63,15 +63,18 @@ export default function Home() {
               ))}
             </div>
           </div>
-
-          {/* Recomendaciones del día */}
-          <div className="pt-10 px-3">
-            <h2 className="text-2xl font-bold text-red-500 mb-6 text-center">Recomendaciones del día</h2>
-
-          </div>
-          <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} videoUrl={selectedVideo} />
         </section>
 
+        {/* Recomendaciones del día */}
+        <section id="recomendaciones">
+        <div className="pt-10 px-3">
+          <h2 className="text-3xl font-bold text-red-500 mb-6 text-center">Recomendaciones del día</h2>
+        </div>
+        </section>
+
+
+
+        <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} videoUrl={selectedVideo} />
         <Footer />
       </main>
     </>
