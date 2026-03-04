@@ -36,9 +36,42 @@ export default function Home() {
   return (
     <>
       <main className="min-h-screen">
-        <section id="inicio">
-          <Navbar />
-          <Carousel images={imagesCarrousel} title={"Nutrición que trasforma tu vida"} text={"Bienestar celular, energía y equilibrio natural."} />
+        <Navbar />
+        <section id="inicio" className="min-h-screen w-full grid grid-cols-1 md:grid-cols-2 bg-[#fff6e8]">
+          {/* Texto */}
+          <div className="flex flex-col justify-center px-10 py-20 gap-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-red-500 leading-tight">Nutrición Celular Inteligente</h1>
+
+            <p className="text-gray-700 text-lg md:text-xl">Recupera tu energía, equilibra tu cuerpo y transforma tu salud desde la raíz.</p>
+
+            <div className="flex gap-4 mt-4">
+              <button className="bg-red-500 text-white px-6 py-3 rounded-full hover:scale-105 transition">Ver servicios </button>
+            </div>
+          </div>
+
+          {/* Imagen / Carousel */}
+          <div className="h-full">
+            <Carousel images={imagesCarrousel} className="h-full" />
+          </div>
+        </section>
+
+        <section id="sobre-nosotros" className="py-20 bg-white">
+          <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-gray-800 mb-6">¿Qué es la Nutrición Celular?</h2>
+              <p className="text-gray-600 leading-relaxed">La nutrición celular trabaja a nivel profundo, ayudando a optimizar el funcionamiento de cada célula para mejorar energía, defensas y equilibrio metabólico.</p>
+            </div>
+
+            <div className="bg-[#fff6e8] p-8 rounded-2xl shadow-md">
+              <h3 className="text-xl font-semibold text-red-500 mb-4">Beneficios</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>✔ Más energía diaria</li>
+                <li>✔ Mejor sistema inmune</li>
+                <li>✔ Regulación metabólica</li>
+                <li>✔ Recuperación más rápida</li>
+              </ul>
+            </div>
+          </div>
         </section>
 
         {/* Scanner  */}
@@ -49,9 +82,9 @@ export default function Home() {
         <section id="productos">
           {/* Productos destacados */}
           <div className="pt-10 px-3 bg-[#fff6e8] pb-10">
-            <h2 className="text-3xl font-bold text-red-500 mb-6 text-center">Productos destacados</h2>
+            <h2 className="text-4xl md:text-5xl font-semibold text-[#1F2937] mb-12 text-center tracking-tight">Soluciones para tu Equilibrio Celular</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 hover:-translate-y-2 transition-all duration-300">
               {products.map((product, index) => (
                 <Card
                   key={index}
@@ -71,14 +104,11 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Recomendaciones del día */}
-        <section id="recomendaciones">
-        <div className="pt-10 px-3">
-          <h2 className="text-3xl font-bold text-red-500 mb-6 text-center">Recomendaciones del día</h2>
-        </div>
+        {/* Testimonios        */}
+        <section id="testimonios" className="py-20 bg-red-500 text-white text-center">
+          <h2 className="text-3xl font-bold mb-6">Más de 500 personas han transformado su salud</h2>
+          <p className="max-w-3xl mx-auto">Nuestro enfoque combina ciencia, tecnología y bienestar natural.</p>
         </section>
-
-
 
         <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} videoUrl={selectedVideo} />
         <Footer />

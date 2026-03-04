@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 
-export default function Carousel({ images, autoSlide = true, interval = 9000, title, text}) {
+export default function Carousel({ images, autoSlide = true, interval = 9000, title, text }) {
   const [current, setCurrent] = useState(0);
 
   const nextSlide = useCallback(() => {
@@ -19,10 +19,10 @@ export default function Carousel({ images, autoSlide = true, interval = 9000, ti
   }, [autoSlide, interval, nextSlide]);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative h-full w-full overflow-hidden rounded-lg">
       {/* Images */}
       {images.map((img, index) => (
-        <div key={index} className={`absolute w-full h-full transition-opacity duration-1000 ${index === current ? "opacity-100 z-10" : "opacity-0 z-0"}`}>
+        <div key={index} className={` absolute inset-0 transition-opacity duration-1000 ${index === current ? "opacity-100 z-10" : "opacity-0 z-0"}`}>
           <img src={img} alt={`slide-${index}`} className="w-full h-full object-cover" />
         </div>
       ))}

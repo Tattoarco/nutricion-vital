@@ -1,32 +1,57 @@
-export default function Card({ image, title, description, primaryText = "Ver más", secondaryText, onPrimaryClick, onSecondaryClick }) {
+export default function Card({
+  image,
+  title,
+  description,
+  primaryText = "Ver más",
+  secondaryText,
+  onPrimaryClick,
+  onSecondaryClick,
+}) {
   return (
-    <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+    <div className="group bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col transform hover:-translate-y-2">
+      
       {/* Imagen */}
       {image && (
-        <div className="w-full h-56 flex items-center justify-center bg-gray-50">
-          <img src={image} alt={title} className="max-h-full max-w-full object-contain transition-transform duration-500 hover:scale-120" />
+        <div className="w-full h-56 bg-gradient-to-b from-gray-50 to-white flex items-center justify-center overflow-hidden">
+          <img
+            src={image}
+            alt={title}
+            className="max-h-full max-w-full object-contain transition-transform duration-700 group-hover:scale-105"
+          />
         </div>
       )}
 
       {/* Contenido */}
       <div className="p-6 flex flex-col grow">
-        <h3 className="text-xl font-semibold text-red-500 mb-3">{title}</h3>
+        <h3 className="text-xl font-semibold text-red-500 mb-3 tracking-wide">
+          {title}
+        </h3>
 
-        <p className="text-gray-600 text-sm leading-relaxed grow">{description}</p>
+        <p className="text-gray-600 text-sm leading-relaxed grow">
+          {description}
+        </p>
 
         {/* Botones */}
         <div className="mt-6 flex flex-col gap-3">
+          
           {primaryText && (
-            <button onClick={onPrimaryClick} className="flex-1 bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-full text-sm font-medium transition  cursor-pointer">
+            <button
+              onClick={onPrimaryClick}
+              className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105"
+            >
               {primaryText}
             </button>
           )}
 
           {secondaryText && (
-            <button onClick={onSecondaryClick} className="flex-1 border border-orange-400 text-orange-500 hover:bg-orange-400 hover:text-white px-4 py-2 rounded-full text-sm font-medium transition cursor-pointer">
+            <button
+              onClick={onSecondaryClick}
+              className="border border-red-500 text-red-500 hover:bg-red-500 hover:text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300"
+            >
               {secondaryText}
             </button>
           )}
+
         </div>
       </div>
     </div>

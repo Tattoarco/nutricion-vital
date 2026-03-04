@@ -1,32 +1,61 @@
 import Carousel from "./Carousel";
 
 export default function Scanner() {
-  const imagesCarrousel = ["https://res.cloudinary.com/dpflwb7nl/image/upload/v1772569585/Scanner_2_cl5bsv.jpg", "https://res.cloudinary.com/dpflwb7nl/image/upload/v1772569584/Scanner_1_kgs29d.jpg"];
+  const imagesCarrousel = [
+    "https://res.cloudinary.com/dpflwb7nl/image/upload/v1772569585/Scanner_2_cl5bsv.jpg",
+    "https://res.cloudinary.com/dpflwb7nl/image/upload/v1772569584/Scanner_1_kgs29d.jpg",
+  ];
 
   return (
-    <>
-      <section id="scanner" className="flex justify-center bg-[#fff6e8] p-5">
-        <div className="text-center ">
-          <h2 className="text-3xl font-bold text-red-500 mb-4">Escanea el código QR</h2>
-          <p className="text-gray-700 mb-6">Conoce sobre el Scanner, sus beneficios y cómo podemos realizar escaneos rápidos y seguros.</p>
+    <section
+      id="scanner"
+      className="py-20 bg-gradient-to-r from-[#fff6e8] to-white"
+    >
+      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        
+        {/* TEXTO */}
+        <div className="space-y-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-red-500 leading-tight">
+            Análisis Celular con Tecnología Avanzada
+          </h2>
 
-          <div className="bg-red-500 grid grid-cols-1 md:grid-cols-2 gap-6 p-6 rounded-lg shadow-md w-[90vw] md:w-[80vw] ">
+          <p className="text-gray-700 text-lg">
+            Evaluamos tu estado interno para diseñar un plan personalizado 
+            que optimice tu energía, equilibrio y bienestar.
+          </p>
 
-            <div className="bg-white rounded-lg p-4 flex flex-col items-center justify-center min-h-120">
-              <Carousel images={imagesCarrousel} />
-            </div>
+          <ul className="space-y-2 text-gray-600">
+            <li>✔ Diagnóstico rápido y no invasivo</li>
+            <li>✔ Resultados inmediatos</li>
+            <li>✔ Plan personalizado</li>
+          </ul>
 
-            <div className="bg-white rounded-lg p-4 flex flex-col items-center justify-center min-h-120">
-              <iframe src="https://res.cloudinary.com/dpflwb7nl/video/upload/v1772568971/Scanner_Cuantico_n0hq5m.mp4" frameborder="0" className="h-full w-full"></iframe>
-            </div>
-          </div>
-
-          <div className="bg-red-500 rounded-lg p-4 mt-2 shadow-md w-[90vw] md:w-full justify-center items-center">
-            <h3 className="text-lg font-semibold text-red-500 mb-2">Escaneo Rápido</h3>
-            <p className="text-gray-600 text-sm">Obtén información instantánea sobre nuestros productos y servicios con solo escanear el código QR.</p>
-          </div>
+          <button className="mt-4 bg-red-500 text-white px-6 py-3 rounded-full hover:scale-105 transition duration-300">
+            Agendar escaneo
+          </button>
         </div>
-      </section>
-    </>
+
+        {/* CONTENIDO VISUAL */}
+        <div className="space-y-6">
+          
+          {/* Video */}
+          <div className="rounded-2xl overflow-hidden shadow-lg">
+            <video
+              src="https://res.cloudinary.com/dpflwb7nl/video/upload/v1772568971/Scanner_Cuantico_n0hq5m.mp4"
+              autoPlay
+              muted
+              loop
+              className="w-full h-[300px] object-cover"
+            />
+          </div>
+
+          {/* Carrusel */}
+          <div className="h-60 rounded-2xl overflow-hidden shadow-md">
+            <Carousel images={imagesCarrousel} />
+          </div>
+
+        </div>
+      </div>
+    </section>
   );
 }

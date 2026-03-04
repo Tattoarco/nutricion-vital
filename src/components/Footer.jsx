@@ -8,7 +8,7 @@ export default function Footer() {
           <p className="mt-4 text-sm text-gray-700 leading-relaxed">Transformamos tu bienestar a través de nutrición celular, hábitos saludables y productos naturales de alta calidad.</p>
 
           <div className="flex gap-4 mt-6 text-xl text-red-500">
-            <a href="#" className="hover:text-orange-500 transition">
+            <a href="https://www.instagram.com/serumvital76?igsh=aTNmZnhpNnhrZTl1" className="hover:text-orange-500 transition">
               <i className="fa-brands fa-instagram"></i>
             </a>
             <a href="#" className="hover:text-orange-500 transition">
