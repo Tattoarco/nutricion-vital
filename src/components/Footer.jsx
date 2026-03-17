@@ -46,8 +46,8 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="/galeria" className="hover:text-red-500 transition">
-                Galería
+              <a href="/sueroterapia" className="hover:text-red-500 transition">
+                Sueroterapia
               </a>
             </li>
             <li>
@@ -64,10 +64,16 @@ export default function Footer() {
           <ul className="space-y-2 text-sm text-gray-700">
             <li>📍 Medellín, Colombia</li>
             <li>📞 +57 3203101763</li>
-            <li>✉ contacto@nutricionvital.com</li>
           </ul>
 
-          <button className="mt-6 bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-full text-sm font-medium transition cursor-pointer">Agenda tu asesoría</button>
+          <a
+            href={`https://wa.me/573203101763?text=${encodeURIComponent("Hola, me interesaría obtener más información sobre sus servicios de nutrición celular y sueroterapia.")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block" // Para que el enlace respete el tamaño del botón
+          >
+            <button className="mt-4 bg-red-500 text-white px-6 py-3 rounded-full hover:scale-105 transition duration-300 font-bold shadow-lg">Agenda tu asesoría</button>
+          </a>
         </div>
       </div>
 

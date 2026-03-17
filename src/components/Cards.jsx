@@ -2,7 +2,7 @@ export default function Card({
   image,
   title,
   description,
-  primaryText = "Ver más",
+  primaryText = "",
   secondaryText,
   onPrimaryClick,
   onSecondaryClick,
@@ -12,7 +12,7 @@ export default function Card({
       
       {/* Imagen */}
       {image && (
-        <div className="w-full h-56 bg-gradient-to-b from-gray-50 to-white flex items-center justify-center overflow-hidden">
+        <div className="w-full h-56 bg-linear-to-b from-gray-50 to-white flex items-center justify-center overflow-hidden">
           <img
             src={image}
             alt={title}
