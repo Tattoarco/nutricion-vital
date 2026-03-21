@@ -6,27 +6,28 @@ import Footer from "../components/Footer";
 import Card from "../components/Cards";
 import Modal from "../components/Modals";
 import Scanner from "../components/Scanner";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const imagesCarrousel = ["https://res.cloudinary.com/dpflwb7nl/image/upload/v1771794713/tropical-fruits-pattern_tekt9o.jpg", "https://res.cloudinary.com/dpflwb7nl/image/upload/v1771794712/watercolor-assortment-fruits_jucwds.jpg"];
 
   const products = [
     {
-      title: "VITALAGE",
-      description: "Programa diseñado para limpiar tu organismo y mejorar tu energía celular.",
-      image: "https://res.cloudinary.com/dpflwb7nl/image/upload/f_auto,q_auto/v1771879505/Colageno_dlcbzp.png",
+      nombre: "VITALAGE COLLAGEN",
+      img: "https://res.cloudinary.com/dpflwb7nl/image/upload/v1774110452/0052_jt3k1n.png",
+      descripcion: "Colágeno hidrolizado que promueve la salud de la piel, articulaciones y huesos, ayudando a mantener una apariencia juvenil.",
       video: "https://res.cloudinary.com/dpflwb7nl/video/upload/f_auto,q_auto/v1771880132/WhatsApp_Video_2026-02-20_at_3.44.46_PM_1_wmg167.mp4",
     },
     {
-      title: "TE DETOX",
-      description: "Nutrientes esenciales para mantener tu cuerpo en óptimas condiciones.",
-      image: null,
+      nombre: "TE DETOX",
+      img: "https://res.cloudinary.com/dpflwb7nl/image/upload/v1774110416/0032_rzn0g4.png",
+      descripcion: "Proporciona una limpieza suave de los órganos internos, regula el metabolismo y ayuda a expulsar toxinas.",
       video: "VIDEO_URL_2",
     },
     {
-      title: "V-NRGY",
-      description: "Fórmula natural para aumentar tu vitalidad y resistencia.",
-      image: null,
+      nombre: "V-ORGANEX",
+      img: "https://res.cloudinary.com/dpflwb7nl/image/upload/v1774110379/0006_vfkmlk.png",
+      descripcion: "Especializado en el detox de hígado, ayuda a liberar toxinas, brinda apoyo en alergias y en la pérdida de peso.",
       video: "VIDEO_URL_3",
     },
   ];
@@ -99,9 +100,9 @@ export default function Home() {
               {products.map((product, index) => (
                 <Card
                   key={index}
-                  image={product.image}
-                  title={product.title}
-                  description={product.description}
+                  image={product.img}
+                  title={product.nombre}
+                  description={product.descripcion}
                   primaryText=""
                   secondaryText="Detalles"
                   onPrimaryClick={() => console.log("Comprar")}
@@ -112,6 +113,13 @@ export default function Home() {
                 />
               ))}
             </div>
+
+            <div className="text-red-600 text-lg  font-bold flex justify-center items-center mt-10 ">
+              <Link to="/Productos" className="hover:text-shadow-lg/30 hover:text-shadow-red-400 transition-all duration-300 hover:scale-105 flex gap-2">
+                Ver más
+                <i class="fi fi-sr-angle-circle-right pt-1"></i>
+              </Link>
+            </div>
           </div>
         </section>
 
@@ -119,6 +127,10 @@ export default function Home() {
         <section id="testimonios" className="py-20 bg-red-500 text-white text-center">
           <h2 className="text-3xl font-bold mb-6">Más de 500 personas han transformado su salud</h2>
           <p className="max-w-3xl mx-auto">Nuestro enfoque combina ciencia, tecnología y bienestar natural.</p>
+        </section>
+
+        <section id="card-testimonio">
+          <p>Aqui van los testimonos o puntuaciones por estrellas, nose..</p>
         </section>
 
         <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} videoUrl={selectedVideo} />

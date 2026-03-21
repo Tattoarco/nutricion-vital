@@ -24,9 +24,9 @@ export default function Productos() {
       {/* GRID TRATAMIENTOS */}
       <section id="productos" className="py-24 bg-gray-100">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 font-bold">
             {tratamientos.map((item, index) => (
-              <Card key={index} title={item.nombre} description={item.descripcion} price={item.precio} duration={item.duracion}  />
+              <Card key={index} image={item.img} title={item.nombre} description={item.descripcion} primaryText="Ver mas"/>
             ))}
           </div>
         </div>
@@ -41,9 +41,9 @@ export default function Productos() {
 
       <section  id="infantil" className="bg-gray-100">
         <div className="max-w-7xl mx-auto px-6 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 font-bold">
             {lineaInfantil.map((item, index) => (
-              <Card key={index} title={item.nombre} description={item.descripcion} price={item.precio} duration={item.duracion} />
+              <Card key={index} image={item.img} title={item.nombre} description={item.descripcion} price={item.precio} duration={item.duracion} />
             ))}
           </div>
         </div>
