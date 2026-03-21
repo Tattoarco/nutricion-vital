@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { optimizeImage } from "../utils/cloudinary";
 
 import Navbar from "../components/Navbar";
 import Carousel from "../components/Carousel";
@@ -6,7 +8,6 @@ import Footer from "../components/Footer";
 import Card from "../components/Cards";
 import Modal from "../components/Modals";
 import Scanner from "../components/Scanner";
-import { Link } from "react-router-dom";
 
 export default function Home() {
   const imagesCarrousel = ["https://res.cloudinary.com/dpflwb7nl/image/upload/v1771794713/tropical-fruits-pattern_tekt9o.jpg", "https://res.cloudinary.com/dpflwb7nl/image/upload/v1771794712/watercolor-assortment-fruits_jucwds.jpg"];
@@ -14,19 +15,19 @@ export default function Home() {
   const products = [
     {
       nombre: "VITALAGE COLLAGEN",
-      img: "https://res.cloudinary.com/dpflwb7nl/image/upload/v1774110452/0052_jt3k1n.png",
+      img: optimizeImage("https://res.cloudinary.com/dpflwb7nl/image/upload/v1774110452/0052_jt3k1n.png"),
       descripcion: "Colágeno hidrolizado que promueve la salud de la piel, articulaciones y huesos, ayudando a mantener una apariencia juvenil.",
       video: "https://res.cloudinary.com/dpflwb7nl/video/upload/f_auto,q_auto/v1771880132/WhatsApp_Video_2026-02-20_at_3.44.46_PM_1_wmg167.mp4",
     },
     {
       nombre: "TE DETOX",
-      img: "https://res.cloudinary.com/dpflwb7nl/image/upload/v1774110416/0032_rzn0g4.png",
+      img:optimizeImage( "https://res.cloudinary.com/dpflwb7nl/image/upload/v1774110416/0032_rzn0g4.png"),
       descripcion: "Proporciona una limpieza suave de los órganos internos, regula el metabolismo y ayuda a expulsar toxinas.",
       video: "VIDEO_URL_2",
     },
     {
       nombre: "V-ORGANEX",
-      img: "https://res.cloudinary.com/dpflwb7nl/image/upload/v1774110379/0006_vfkmlk.png",
+      img: optimizeImage("https://res.cloudinary.com/dpflwb7nl/image/upload/v1774110379/0006_vfkmlk.png"),
       descripcion: "Especializado en el detox de hígado, ayuda a liberar toxinas, brinda apoyo en alergias y en la pérdida de peso.",
       video: "VIDEO_URL_3",
     },

@@ -32,7 +32,16 @@ export default function Navbar() {
       <nav>
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           {/* Logo */}
-          <h1 className="text-2xl font-extrabold text-red-500 tracking-wide">Nutrición Vital</h1>
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10">
+              <img src="/NutricionVital_icon.png" alt="Logo Nutrición Vital" className="w-full h-full object-contain" />
+            </div>
+
+            <div className="flex flex-col">
+              <h1 className="text-3xl font-extrabold text-red-500 leading-tight">Nutrición Vital</h1>
+              <h2 className="text-sm text-gray-600 leading-tight">Maria Jhanet Arco Aguilar</h2>
+            </div>
+          </div>
 
           {/* Desktop */}
           <div className="hidden md:flex space-x-6 items-center">
