@@ -10,7 +10,7 @@ export default function Card({
   onSecondaryClick,
 }) {
   return (
-    <div className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col transform hover:-translate-y-2">
+    <section className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col transform hover:-translate-y-2">
       
       {/* Imagen */}
       {image && (
@@ -56,6 +56,6 @@ export default function Card({
 
         </div>
       </div>
-    </div>
+    </section>
   );
 }

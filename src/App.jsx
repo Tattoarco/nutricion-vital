@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Productos from "./pages/Products";
 import Sueroterapia from "./pages/Sueroterapia";
 import Loader from "./components/Loader";
+import Contacto from "./pages/Us";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -27,6 +28,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Productos" element={<Productos />} />
         <Route path="/Sueroterapia" element={<Sueroterapia />} />
+        <Route path="/Contacto" element={<Contacto />} />
       </Routes>);
 }
 export default App;

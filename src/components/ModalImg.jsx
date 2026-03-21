@@ -31,7 +31,7 @@ export default function ImageModal({ isOpen, onClose, img }) {
   };
 
   return (
-    <div className={`fixed inset-0 z-50 flex items-center justify-center transition-opacity duration-300 ${isOpen ? "bg-black/70 opacity-100" : "bg-black/0 opacity-0"}`} onClick={onClose}>
+    <section className={`fixed inset-0 z-50 flex items-center justify-center transition-opacity duration-300 ${isOpen ? "bg-black/70 opacity-100" : "bg-black/0 opacity-0"}`} onClick={onClose}>
       {/* Modal */}
       <div className={`relative max-w-3xl w-full mx-4 transform transition-all duration-300 ${isOpen ? "scale-100 opacity-100" : "scale-90 opacity-0"}`} onClick={(e) => e.stopPropagation()}>
         <ImageWithLoader src={getHighQuality(img)} alt="preview" className="w-full h-auto rounded-2xl shadow-2xl" />
@@ -41,6 +41,6 @@ export default function ImageModal({ isOpen, onClose, img }) {
           ✕
         </button>
       </div>
-    </div>
+    </section>
   );
 }

@@ -25,7 +25,7 @@ export default function Productos() {
       {/* GRID TRATAMIENTOS */}
       <section id="productos" className="py-24 bg-gray-100">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-10 font-bold">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 font-bold">
             {tratamientos.map((item, index) => (
               <Card
                 key={index}
