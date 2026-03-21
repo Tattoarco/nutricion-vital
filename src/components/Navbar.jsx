@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { Link, useLocation } from "react-router-dom";
 
 const NavItem = ({ to, children, isActive, onClose }) => {
@@ -55,7 +54,7 @@ export default function Navbar() {
 
           {/* Mobile Button */}
           <button className="md:hidden text-2xl text-red-500 transition" onClick={() => setIsOpen(!isOpen)}>
-            <FontAwesomeIcon icon={isOpen ? faXmark : faBars} />
+            <i className={isOpen ? "fi fi-rr-cross" : "fi fi-rr-menu-burger"}></i>
           </button>
         </div>
 

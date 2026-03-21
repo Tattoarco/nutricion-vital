@@ -1,4 +1,4 @@
-import Carousel from "./Carousel";
+// import Carousel from "./Carousel";
 
 export default function Scanner() {
   // const imagesCarrousel = ["https://res.cloudinary.com/dpflwb7nl/image/upload/v1772569585/Scanner_2_cl5bsv.jpg", "https://res.cloudinary.com/dpflwb7nl/image/upload/v1772569584/Scanner_1_kgs29d.jpg"];
@@ -14,8 +14,8 @@ export default function Scanner() {
 
           <ul className="space-y-2 text-gray-600">
             <li><i className="fi fi-sr-duration-alt pr-1 text-blue-900"></i>Diagnóstico rápido y no invasivo</li>
-            <li><i class="fi fi-sr-customize-edit pr-1 text-blue-900"></i>Resultados inmediatos</li>
-            <li><i class="fi fi-sr-people-poll pr-1 text-blue-900"></i>Plan personalizado</li>
+            <li><i className="fi fi-sr-customize-edit pr-1 text-blue-900"></i>Resultados inmediatos</li>
+            <li><i className="fi fi-sr-people-poll pr-1 text-blue-900"></i>Plan personalizado</li>
           </ul>
 
           <a
