@@ -13,9 +13,9 @@ export default function Scanner() {
           <p className="text-gray-700 text-lg">Evaluamos tu estado interno para diseñar un plan personalizado que optimice tu energía, equilibrio y bienestar.</p>
 
           <ul className="space-y-2 text-gray-600">
-            <li> Diagnóstico rápido y no invasivo</li>
-            <li>✔ Resultados inmediatos</li>
-            <li>✔ Plan personalizado</li>
+            <li><i className="fi fi-sr-duration-alt pr-1 text-blue-900"></i>Diagnóstico rápido y no invasivo</li>
+            <li><i class="fi fi-sr-customize-edit pr-1 text-blue-900"></i>Resultados inmediatos</li>
+            <li><i class="fi fi-sr-people-poll pr-1 text-blue-900"></i>Plan personalizado</li>
           </ul>
 
           <a

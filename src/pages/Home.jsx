@@ -12,19 +12,19 @@ export default function Home() {
 
   const products = [
     {
-      title: "Plan Detox Frutal",
+      title: "VITALAGE",
       description: "Programa diseñado para limpiar tu organismo y mejorar tu energía celular.",
       image: "https://res.cloudinary.com/dpflwb7nl/image/upload/f_auto,q_auto/v1771879505/Colageno_dlcbzp.png",
       video: "https://res.cloudinary.com/dpflwb7nl/video/upload/f_auto,q_auto/v1771880132/WhatsApp_Video_2026-02-20_at_3.44.46_PM_1_wmg167.mp4",
     },
     {
-      title: "Suplemento Celular",
+      title: "TE DETOX",
       description: "Nutrientes esenciales para mantener tu cuerpo en óptimas condiciones.",
       image: null,
       video: "VIDEO_URL_2",
     },
     {
-      title: "Energía Natural",
+      title: "V-NRGY",
       description: "Fórmula natural para aumentar tu vitalidad y resistencia.",
       image: null,
       video: "VIDEO_URL_3",
@@ -45,7 +45,10 @@ export default function Home() {
             <p className="text-gray-700 text-lg md:text-xl">Recupera tu energía, equilibra tu cuerpo y transforma tu salud desde la raíz.</p>
 
             <div className="flex gap-4 mt-4">
-              <button className="bg-red-500 text-white px-6 py-3 rounded-full hover:scale-105 transition">Ver servicios </button>
+              <button className="bg-red-500 text-white px-6 py-3 rounded-full hover:scale-105 transition">
+                {" "}
+                <i className="fi fi-rr-customer-care pr-1.5"></i>Ver servicios{" "}
+              </button>
             </div>
           </div>
 
@@ -65,10 +68,18 @@ export default function Home() {
             <div className="bg-[#fff6e8] p-8 rounded-2xl shadow-md">
               <h3 className="text-xl font-semibold text-red-500 mb-4">Beneficios</h3>
               <ul className="space-y-2 text-gray-600">
-                <li>✔ Más energía diaria</li>
-                <li>✔ Mejor sistema inmune</li>
-                <li>✔ Regulación metabólica</li>
-                <li>✔ Recuperación más rápida</li>
+                <li>
+                  <i className="fi fi-sr-bolt text-blue-900" /> Más energía diaria
+                </li>
+                <li>
+                  <i className="fi fi-sr-stomach text-blue-900" /> Mejor sistema inmune
+                </li>
+                <li>
+                  <i className="fi fi-sr-rules text-blue-900"></i> Regulación metabólica
+                </li>
+                <li>
+                  <i className="fi fi-sr-time-past text-blue-900"></i> Recuperación más rápida
+                </li>
               </ul>
             </div>
           </div>

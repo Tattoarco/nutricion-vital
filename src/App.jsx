@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 import Home from "./pages/Home";
 import Productos from "./pages/Products";
+import Sueroterapia from "./pages/Sueroterapia";
 import Loader from "./components/Loader";
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Productos" element={<Productos />} />
-       
+        <Route path="/Sueroterapia" element={<Sueroterapia />} />
       </Routes>);
 }
 export default App;

@@ -39,21 +39,19 @@ export default function Navbar() {
           {/* Desktop */}
           <div className="hidden md:flex space-x-6 items-center">
             <NavItem to="/" isActive={location.pathname === "/"} onClose={() => setIsOpen(false)}>
-              Inicio
+              <i className="fi fi-rr-home pr-1"></i> Inicio
             </NavItem>
             <NavItem to="/Productos" isActive={location.pathname === "/Productos"} onClose={() => setIsOpen(false)}>
+              <i className="fi fi-rr-box-open pr-1"></i>
               Productos
             </NavItem>
             <NavItem to="/Sueroterapia" isActive={location.pathname === "/Sueroterapia"} onClose={() => setIsOpen(false)}>
-              SueroTerapia
+              <i className="fi fi-rr-syringe pr-1"></i> Suero-terapia
             </NavItem>
             <NavItem to="/Contacto" isActive={location.pathname === "/Contacto"} onClose={() => setIsOpen(false)}>
+              <i className="fi fi-rr-customer-service pr-1"></i>
               Contacto
             </NavItem>
-
-            {/* <Link to="/contacto" className="ml-4 bg-red-500 text-white px-5 py-2 rounded-full hover:scale-105 transition">
-              Agendar
-            </Link> */}
           </div>
 
           {/* Mobile Button */}
@@ -66,15 +64,19 @@ export default function Navbar() {
         <div className={`md:hidden overflow-hidden transition-all duration-300 ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}>
           <div className="flex flex-col items-center space-y-4 py-6 bg-white shadow-lg">
             <NavItem to="/" isActive={location.pathname === "/"} onClose={() => setIsOpen(false)}>
+              <i className="fi fi-rr-home pr-1 animate-spin"></i>
               Inicio
             </NavItem>
             <NavItem to="/productos" isActive={location.pathname === "/productos"} onClose={() => setIsOpen(false)}>
+              <i className="fi fi-rr-box-open pr-1"></i>
               Productos
             </NavItem>
-            <NavItem to="/galeria" isActive={location.pathname === "/galeria"} onClose={() => setIsOpen(false)}>
-              SueroTerapia
+            <NavItem to="/Sueroterapia" isActive={location.pathname === "/Sueroterapia"} onClose={() => setIsOpen(false)}>
+              <i className="fi fi-rr-syringe pr-1"></i>
+              Suero-terapia
             </NavItem>
             <NavItem to="/contacto" isActive={location.pathname === "/contacto"} onClose={() => setIsOpen(false)}>
+              <i className="fi fi-rr-customer-service pr-1"></i>
               Contacto
             </NavItem>
 
