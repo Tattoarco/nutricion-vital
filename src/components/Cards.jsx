@@ -8,7 +8,7 @@ export default function Card({
   onSecondaryClick,
 }) {
   return (
-    <div className="group bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col transform hover:-translate-y-2">
+    <div className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col transform hover:-translate-y-2">
       
       {/* Imagen */}
       {image && (
@@ -16,7 +16,7 @@ export default function Card({
           <img
             src={image}
             alt={title}
-            className="max-h-full max-w-full object-contain transition-transform duration-700 group-hover:scale-105"
+            className="max-h-full max-w-full object-contain transition-transform duration-700 group-hover:scale-105 rounded-lg"
           />
         </div>
       )}
@@ -37,7 +37,7 @@ export default function Card({
           {primaryText && (
             <button
               onClick={onPrimaryClick}
-              className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105"
+              className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 cursor-pointer"
             >
               {primaryText}
             </button>
@@ -46,7 +46,7 @@ export default function Card({
           {secondaryText && (
             <button
               onClick={onSecondaryClick}
-              className="border border-red-500 text-red-500 hover:bg-red-500 hover:text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300"
+              className="border border-red-500 text-red-500 hover:bg-red-500 hover:text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer"
             >
               {secondaryText}
             </button>

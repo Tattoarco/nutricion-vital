@@ -1,13 +1,14 @@
 import { useState } from "react";
-import Navbar from "../components/Navbar";
-import Modal from "../components/Modals";
-import Footer from "../components/Footer";
-import Card from "../components/Cards";
 import { tratamientos, lineaInfantil } from "../data/tratamientos";
 
+import Navbar from "../components/Navbar";
+import ImageModal from "../components/ModalImg";
+import Footer from "../components/Footer";
+import Card from "../components/Cards";
+
 export default function Productos() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedVideo] = useState(null);
+  const [open, setOpen] = useState(false);
+  const [selectedImg, setSelectedImg] = useState(null);
 
   return (
     <>
@@ -24,34 +25,53 @@ export default function Productos() {
       {/* GRID TRATAMIENTOS */}
       <section id="productos" className="py-24 bg-gray-100">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 font-bold">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-10 font-bold">
             {tratamientos.map((item, index) => (
-              <Card key={index} image={item.img} title={item.nombre} description={item.descripcion} primaryText="Ver mas"/>
+              <Card
+                key={index}
+                image={item.img}
+                title={item.nombre}
+                description={item.descripcion}
+                primaryText="Ver mas"
+                onPrimaryClick={() => {
+                  setSelectedImg(item.imgDetalle);
+                  setOpen(true);
+                }}
+              />
             ))}
           </div>
         </div>
       </section>
 
       <section className="py-16 shadow-xl border-t-4 border-b-4 bg-[#0f172a] border-red-500">
-        
         <div className="max-w-5xl mx-auto px-6 text-center text-white">
           <h2 className="text-4xl font-bold mb-4">Línea infantil: Nutrición desde el inicio de la vida</h2>
         </div>
       </section>
 
-      <section  id="infantil" className="bg-gray-100">
+      <section id="infantil" className="bg-gray-100">
         <div className="max-w-7xl mx-auto px-6 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 font-bold">
+          <div className="grid grid-cols-1  md:grid-cols-3 gap-10 font-bold">
             {lineaInfantil.map((item, index) => (
-              <Card key={index} image={item.img} title={item.nombre} description={item.descripcion} price={item.precio} duration={item.duracion} />
+              <Card
+                key={index}
+                image={item.img}
+                title={item.nombre}
+                description={item.descripcion}
+                price={item.precio}
+                duration={item.duracion}
+                primaryText="Ver mas"
+                onPrimaryClick={() => {
+                  setSelectedImg(item.imgDetalle.replace("/upload/", "/upload/f_auto,q_auto:best,w_900/"));
+                  setOpen(true);
+                }}
+              />
             ))}
           </div>
         </div>
       </section>
 
-   
-
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} videoUrl={selectedVideo} />
+      <ImageModal isOpen={open} onClose={() => setOpen(false)} img={selectedImg} />
 
       <Footer />
     </>
