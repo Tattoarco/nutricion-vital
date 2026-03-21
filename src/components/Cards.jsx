@@ -1,3 +1,5 @@
+import ImageWithLoader from "../utils/Loader"
+
 export default function Card({
   image,
   title,
@@ -13,7 +15,7 @@ export default function Card({
       {/* Imagen */}
       {image && (
         <div className="w-full h-56 bg-linear-to-b from-gray-50 to-white flex items-center justify-center overflow-hidden">
-          <img
+          <ImageWithLoader
             src={image}
             alt={title}
             className="max-h-full max-w-full object-contain transition-transform duration-700 group-hover:scale-105 rounded-lg"
