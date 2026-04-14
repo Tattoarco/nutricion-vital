@@ -130,9 +130,9 @@ export default function Home() {
           <p className="max-w-3xl mx-auto">Nuestro enfoque combina ciencia, tecnología y bienestar natural.</p>
         </section>
 
-        <section id="card-testimonio">
+        {/* <section id="card-testimonio">
           <p>Aqui van los testimonos o puntuaciones por estrellas, nose..</p>
-        </section>
+        </section> */}
 
         <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} videoUrl={selectedVideo} />
         <Footer />
